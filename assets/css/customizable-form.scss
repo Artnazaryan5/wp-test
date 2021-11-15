@@ -1,0 +1,269 @@
+.customizable-form-wrapper {
+    background-color: #010001;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    width: 100%;
+    .customizable-form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1004px;
+        width: 100%;
+        .customizable-form-section:first-child {
+            width: 508px;
+        }
+        .customizable-form-section:last-child {
+            width: calc(100% - 588px);
+        }
+        .main-window {
+            background-color: #ae47a0;
+            border-radius: 50%;
+            height: 508px;
+            position: relative;
+            width: 100%;
+        }
+
+        .main-window__company-name {
+            align-items: center;
+            background-color: #ae47a0;
+            border-radius: 50%;
+            display: flex;
+            flex-wrap: wrap;
+            height: 96px;
+            justify-content: center;
+            margin: 0 auto;
+            width: 96px;
+        }
+        .main-window__company-name .initials {
+            color: #fff;
+            font-family: Montserrat, sans-serif;
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 1;
+            text-align: center;
+            text-transform: uppercase;
+            width: 100%;
+        }
+        .main-window__message {
+            color: #fff;
+            font-family: Montserrat, sans-serif;
+            font-size: 25px;
+            font-weight: 500;
+            line-height: 1.36;
+            margin: 28px auto 0;
+            max-width: 224px;
+            overflow: hidden;
+            text-align: center;
+            width: 100%;
+        }
+        .main-window .main-window-list {
+            margin-top: 28px;
+        }
+        .main-window .main-window-list__item {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 28px;
+        }
+        .main-window .main-window-list__item:first-child {
+            margin-top: 0;
+        }
+        .main-window .main-window-list__item .icon-wrapper {
+            height: 30px;
+            width: 44px;
+        }
+        .main-window .main-window-list__item .icon-wrapper img,
+        .main-window .main-window-list__item .icon-wrapper svg {
+            display: block;
+            margin: auto;
+        }
+        .main-window .main-window-list__item .placeholder {
+            margin-left: 20px;
+        }
+        .main-window__controls {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 40px;
+        }
+        .main-window__controls .button {
+            border-radius: 20px;
+            box-shadow: 0 2px 4px rgba(28, 39, 69, 0.12), 0 -2px 4px 1px rgba(28, 39, 69, 0.07);
+            font-family: Helvetica;
+            font-size: 14px;
+            line-height: 1.15;
+            padding: 8px 12px;
+            text-align: center;
+            width: 128px;
+        }
+        .main-window__controls .button_decline {
+            background-color: #fff;
+            color: #1c2745;
+        }
+        .main-window__controls .button_approve {
+            color: #fff;
+        }
+        .main-window-inner {
+            background-color: #191919;
+            border-radius: 25px 0 0 0;
+            height: 100%;
+            margin: 0 auto;
+            padding: 40px 48px 102px;
+            width: 364px;
+        }
+        .customizable-form-form {
+            padding: 60px 0 0;
+        }
+        .customizable-form-form__field {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 54px;
+            &:first-child {
+                margin-top: 0;
+            }
+            label {
+                color: #fff;
+                display: block;
+                font-family: Montserrat, sans-serif;
+                font-size: 20px;
+                font-weight: 600;
+                line-height: 1.7;
+                width: 168px;
+            }
+            .input-wrapper {
+                width: 224px;
+            }
+            .input-wrapper.bound {
+                align-items: center;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .input-wrapper.bound .input_text {
+                text-transform: uppercase;
+                width: calc(100% - 76px);
+            }
+            .input_text {
+                background-color: #010001;
+                border: none;
+                border-bottom: 1px solid #fff;
+                box-shadow: none;
+                color: #fff;
+                font-family: Montserrat, sans-serif;
+                font-size: 20px;
+                font-weight: 300;
+                line-height: 1.7;
+                outline: none;
+                padding: 0 0 0 8px;
+            }
+            .input_text::placeholder {
+                color: #fff;
+                opacity: 1;
+            }
+            .input_color {
+                background: none;
+                border: none;
+                border-radius: 3px;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                height: 56px;
+                padding: 0;
+                width: 56px;
+            }
+            .input_color::-webkit-color-swatch {
+                border: none;
+            }
+            .input_color::-moz-color-swatch {
+                border: none;
+            }
+        }
+        @media (max-width: 1200px) {
+            .customizable-form-section:first-child {
+                margin: 0 auto;
+                max-width: 508px;
+                order: 2;
+                width: 100%;
+            }
+            .customizable-form-section:last-child {
+                margin: 0 auto 48px;
+                max-width: 508px;
+                order: 1;
+                width: 100%;
+            }
+            .customizable-form-form {
+                padding: 0;
+            }
+            .customizable-form-form__field {
+                margin-top: 28px;
+                label {
+                    display: none;
+                }
+                .input-wrapper {
+                    width: 100%;
+                }
+                .input-wrapper.bound .input_text {
+                    width: calc(100% - 56px);
+                }
+                .input_text {
+                    font-size: 18px;
+                }
+                .input_color {
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+        @media (max-width: 620px) {
+            .main-window {
+                height: 320px;
+                margin: 0 auto;
+                max-width: 320px;
+                width: 100%;
+            }
+            .main-window__company-name {
+                height: 60px;
+                width: 60px;
+            }
+            .main-window__company-name .initials {
+                font-size: 24px;
+            }
+            .main-window__message {
+                font-size: 16px;
+                margin: 16px auto 0;
+            }
+            .main-window .main-window-list {
+                margin-top: 16px;
+            }
+            .main-window .main-window-list__item .icon-wrapper {
+                height: 24px;
+                width: 36px;
+            }
+            .main-window .main-window-list__item .icon-wrapper svg {
+                height: 100%;
+                width: 100%;
+            }
+            .main-window .main-window-list__item .placeholder {
+                height: 24px;
+            }
+            .main-window__controls {
+                margin-top: 28px;
+            }
+            .main-window__controls .button {
+                font-size: 12px;
+                padding: 4px 8px;
+                width: 44%;
+            }
+            .main-window-inner {
+                height: 100%;
+                margin: 0 auto;
+                padding: 20px 24px 52px;
+                width: 260px;
+            }
+        }
+    }
+}
